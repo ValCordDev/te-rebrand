@@ -18,6 +18,11 @@ export function createAuth(env: AuthConfig, database: Database) {
     trustedOrigins: [env.BETTER_AUTH_URL],
     secret: env.BETTER_AUTH_SECRET,
     baseURL: env.BETTER_AUTH_URL,
+    advanced: {
+      ipAddress: {
+        ipAddressHeaders: ["cf-connecting-ip"],
+      },
+    },
     // Discord is the only way to log in (docs/PLAN.md). Steam is linked
     // afterwards through Steam OpenID, see apps/web/src/lib/steam.ts.
     socialProviders: {
