@@ -19,7 +19,7 @@ infra
 
 Dockerfile
 **/Dockerfile
-docker-compose.yml
+docker-compose*.yml
 
 # Env value files never go into an image; the schemas do.
 **/.env

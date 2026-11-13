@@ -2,6 +2,8 @@
 
 One Linux VM runs everything with Docker Compose: Postgres, a one-shot migration step, the website, the Discord bot and Caddy (HTTPS). Files: `infra/` in this repo; on the server they live in `/opt/tacho`.
 
+Hosting on Coolify instead: see [COOLIFY.md](COOLIFY.md) and `docker-compose.coolify.yml`.
+
 ```
 internet ──80/443──> caddy ──> web:3001 (site, API, /api/live/ws WebSocket)
                                  │
